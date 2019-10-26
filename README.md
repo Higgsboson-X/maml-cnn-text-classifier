@@ -141,19 +141,20 @@ optional arguments:
   --restore-ckpt-path RESTORE_CKPT_PATH
                         checkpoint path for saved model if restore from saved
 ```
-Run the program with options and arguments, e.g.,
+Change the current folder to `code` and run the program with options and arguments, e.g.,
 ```
-python3 main.py \
-    --maml-epochs=10 \
-    --train-epochs=5 \
-    --support-data-size-per-task=18000 \
-    --query-data-size-per-task=1800 \
-    --train-task-id=1 \
-    --infer-task-id=2 \
-    --test-task-id=3 \
-    --infer --test \
-    --maml-num-batches=64 \
-    --train-num-batches=64 \
+$ cd code
+$ python3 main.py \
+      --maml-epochs=10 \
+      --train-epochs=5 \
+      --support-data-size-per-task=18000 \
+      --query-data-size-per-task=1800 \
+      --train-task-id=1 \
+      --infer-task-id=2 \
+      --test-task-id=3 \
+      --infer --test \
+      --maml-num-batches=64 \
+      --train-num-batches=64 \
 ```
 The command above trains the meta-learner for 10 epochs with 64 batches, fine-tunes for task 1 with 5 epochs and 64 batches, performs inference for task 2, performs test for task 3, and performs both inference and test after fine-tuning.
 ## Results on the Sample Corpus
