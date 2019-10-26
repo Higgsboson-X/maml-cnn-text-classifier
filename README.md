@@ -9,13 +9,13 @@ This repository contains an implementation of [Model-Agnostic Meta-Learning Algo
 - nltk == 3.4.5
 ## Methodology
 ### MAML
-Meta-learning is aim at enabling a model to quickly adapt to a new task with few data samples. Specifically, MAML attempts to learn a better initialization for each subtasks, such that it can quickly fit into the new data in a few training epochs. 
+Meta-learning is aimed at enabling a model to quickly adapt to a new task with few data samples. Specifically, MAML attempts to learn a better initialization for each subtask, such that it can quickly fit into the new data in a few training epochs. 
 
 ![maml diagram](https://github.com/Higgsboson-X/maml-cnn-text-classifier/blob/master/images/maml_fig.png "MAML Diagram")
 
 A model consists of a meta-learning and a set of sub-learners.
-1. In the meta-learning stage, each update for the meta-learner requires few updates in the sub-task learners. Specifically, for all sub-tasks in this model, each sub-learner starts from the same set of parameters as the meta-learning, and updates its parameters by gradient descent using the samples drawn from the task-specific data. Each sub-task update contains a support step, which is used to update the sub-learner's parameters, and a query step, which is performed on a task-specific test set. The update for each sub-task is performed for a predefined number of steps. The loss from the last query step is used to calculate the proposed direction by this sub-task using gradient descent. Note that this gradient is calculated with respect to the initial meta-learner's parameters. The final direction that meta-learner takes is an average among all directions of all sub-tasks.
-2. In the fine-tuning stage, the model initializes from the meta-leaner's parameters and is trained using a task-specific small set of data. Here, the dataset used in the meta-learning stage and the fine-tuning stage are the same for each task.
+1. In the meta-learning stage, each update for the meta-learner requires few updates in the sub-task learners. Specifically, for all sub-tasks in this model, each sub-learner starts from the same set of parameters as the meta-learner, and updates its parameters by gradient descent using the samples drawn from the task-specific data. Each sub-task update contains a support step, which is used to update the sub-learner's parameters, and a query step, which is performed on a task-specific test set. The update for each sub-task is performed for a predefined number of steps. The loss from the last query step is used to calculate the proposed direction by this sub-task using gradient descent. Note that this gradient is calculated with respect to the initial meta-learner's parameters. The final direction that meta-learner takes is an average among all directions proposed by all sub-tasks.
+2. In the fine-tuning stage, the model initializes from the pretrained meta-leaner's parameters and is trained using a task-specific small set of data. Here, the dataset used in the meta-learning stage and the fine-tuning stage are the same for each task.
 
 The MAML algorithm presented in the original paper is shown in the following figure.
 
