@@ -1,0 +1,122 @@
+# merged
+1 = alban kraisheimer: 15604 (nddp, notre dame de paris) [6]
+2 = andrew r. macandrew: 39454 (tbk, the brothers karamazov) [10]
+3 = david hawkes: 62924 (tsos, the story of stone) [12]
+4 = h. t. lowe-porter: 34471 (tmm, the magic mountain) [7]
+5 = ian c. johnston: 25076 (ti, the illiad) [11]
+6 = isabel florence hapgood: 44507 (nddp + lm, notre dame de paris + les miserables) [1 + 8]
+7 = john e. woods: 35660 (tmm, the magic mountain) [4]
+8 = julie rose: 35161 (lm, les miserables) [6]
+9 = michael r. katz: 22123 (cap, crime and punishment) [10]
+10 = richard pevear: 121217 (cap + tbk, crime and punishment + the brothers karamazov) [9 + 2]
+11 = robert fagles: 11911 (ti, the illiad) [5]
+12 = yang xianyi: 62802 (tsos, the story of stone) [3]
+
+# aligned
+cap = crime and punishment
+lm = les miserables
+nddp = notre dame de paris
+tbk = the brothers karamazov
+ti = the illiad
+tmm = the magic mountain
+tsos = the story of stone
+
+# tasks
+# format = task#: label0 & label1
+1: 1 & 6
+2: 2 & 10
+3: 3 & 12
+4: 4 & 7
+5: 5 & 11
+6: 6 & 8
+7: 9 & 10
+
+
+# data size
+train = 10000
+val = 1000
+test = 1000
+
+# final data size
+train = 119997
+val = 12000
+
+# list of authors: [*] indicating parallel text available
+
+alban krailsheimer
+---------------------------------
+salammbo
+notre dame de paris [*]
+
+andrew r. macandrew
+---------------------------------
+the adolescent
+the brothers karamazov [*]
+
+david hawkes
+---------------------------------
+the culture of usury in renaissance england
+the faust myth
+the story of stone [*]
+
+h. t. lowe-porter
+---------------------------------
+buddenbrooks_decline of a family
+doctor faustus
+the magic mountain [*]
+
+ian c. johnston
+---------------------------------
+the birth of tragedy
+the illiad [*]
+the odyssey
+
+isabel florence hapgood
+---------------------------------
+notre dame de paris [*]
+les miserables [*]
+
+john e. woods
+---------------------------------
+buddenbrooks_the decline of a family
+doctor faustus
+the magic mountain [*]
+
+julie rose
+---------------------------------
+art and fear
+figures of history
+les miserables [*]
+
+micheal r. katz
+---------------------------------
+crime and punishment [*]
+fathers and sons
+
+richard pevear
+---------------------------------
+crime and punishment [*]
+notes from underground
+stories of anton chekhov
+the adolescent
+the brothers karamazov
+the collected tales of nikolai gogol
+the eternal husband and other stories
+the idiot
+the three musketeers
+war and peace
+
+robert fagles
+---------------------------------
+the aeneid
+the illiad [*]
+
+yang xianyi
+---------------------------------
+li sao
+the scholars
+the story of stone [*]
+
+# notes:
+# test data size = 1000
+
